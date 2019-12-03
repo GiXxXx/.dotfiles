@@ -36,15 +36,6 @@ Plugin 'L9'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'flazz/vim-colorschemes'
 
-" Navigate "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'ctrlp.vim'
-    nmap <c-p><c-p> :CtrlP <cr>
-    nmap <c-p><c-o> :CtrlPCurWD <cr>
-" Plugin 'FuzzyFinder'
-" Plugin 'wincent/Command-T'
-
-
 
                       """""""""""""""""""""""""""""""""""""
                       "                                   "
@@ -63,23 +54,15 @@ Plugin 'matchit.zip'
 
 " Shortcuts "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'Lokaltog/vim-easymotion'
-    let g:EasyMotion_leader_key = '<Leader><Leader>'
-    " usage: <Leader><Leader>fx
-    " usage: <Leader><Leader>w
-
 Plugin 'The-NERD-tree'
-    nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
+    nmap <C-t> :NERDTree <cr> :set rnu <cr>
     let NERDTreeIgnore          = ['\.$','\~$']
     let NERDTreeShowBookmarks   = 1
     let NERDTreeShowFiles       = 1
     let NERDTreeShowHidden      = 1
     let NERDTreeShowLineNumbers = 1
     let NERDTreeWinPos          = 1
-    " usage: ,<Tab>
-
-Plugin 'junegunn/vim-easy-align'
-    " usage: select & <Enter>
+    " usage: <C-t>
 
 Plugin 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_enable_on_vim_startup = 1
@@ -132,13 +115,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'jiangmiao/auto-pairs'
-
-" Buffer Switcher "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'bufexplorer.zip'
-    vnoremap <silent> <Enter> :EasyAlign<Enter>
-    " usage: <Leader>be
-
 
 " VIM StatusLine "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -256,24 +232,7 @@ set list
 
 "set mouse=a
 
-" nmap <C-S-t> :sp<bar>:b#<CR>
-" nmap <C-j>  :tabnext <CR>
-" nmap <C-k>  :tabprevious <CR>
-map <F2> :nohl <CR>
-map <F6> :set invpaste <CR>
-map <F5> :set invnumber <CR>
-nnoremap <silent> <F12> :A<CR>
-
 set wmh=0
-
-nmap <leader>w <c-w>
-nmap <c-w>e <c-w>_
-nmap <c-w>r <c-w>=
-
-nmap <c-k> <c-w>k<c-w>=
-nmap <c-j> <c-w>j<c-w>=
-nmap <c-h> <c-w>h<c-w>=
-nmap <c-l> <c-w>l<c-w>=
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
