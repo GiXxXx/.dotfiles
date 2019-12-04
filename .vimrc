@@ -230,6 +230,8 @@ set incsearch
 set showmatch
 
 set list
+set lcs+=space:·
+set lcs+=tab:>-
 
 "set mouse=a
 
