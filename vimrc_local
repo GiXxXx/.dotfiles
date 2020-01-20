@@ -25,9 +25,12 @@ call vundle#begin()
 " Basic "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails.git'
 Plugin 'L9'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'The-NERD-Commenter'
+Plugin 'matchit.zip'
+
 
 " Theme "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,14 +43,6 @@ Plugin 'flazz/vim-colorschemes'
                       "                                   "
                       "                                   "
                       """""""""""""""""""""""""""""""""""""
-
-" Basic "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
-Plugin 'The-NERD-Commenter'
-Plugin 'matchit.zip'
-
 
 " Shortcuts "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,11 +60,8 @@ Plugin 'The-NERD-tree'
 Plugin 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_enable_on_vim_startup = 1
 
-Plugin 'nginx.vim'
-    au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/usr/local/etc/nginx/* if &ft == '' | setfiletype nginx | endif
-
-" Complete & Promot"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Complete & Promot"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'Valloric/YouCompleteMe'
     let g:ycm_autoclose_preview_window_after_insertion = 1
     let g:ycm_autoclose_preview_window_after_completion = 1
@@ -103,6 +95,15 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'dyng/ctrlsf.vim'
+	let g:ctrlsf_ackprg='ag'
+	let g:ctrlsf_auto_close=0
+	let g:ctrlsf_case_sensitive='no' 
+	let g:ctrlsf_default_root='cwd'
+	let g:ctrlsf_auto_focus = {"at": "start"}
 
 " VIM StatusLine "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,9 +184,6 @@ set backspace=indent,eol,start
 set number
 set ru
 
-"colorscheme murphy
-"colorscheme desert
-"colorscheme slate
 colorscheme molokai
 
 set fileencodings=utf-8,cp936,latin1,ucs-bom
@@ -198,10 +196,7 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-"set smartindent
-"set cindent
 
-"set textwidth=80
 set linebreak
 set backspace=2
 set hlsearch
