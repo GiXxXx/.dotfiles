@@ -47,8 +47,8 @@ Plugin 'flazz/vim-colorschemes'
 " Shortcuts "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'The-NERD-tree'
-    nmap <C-b> :NERDTree <cr> :set rnu <cr>
-    nmap <C-t> :tabnew <cr>
+    nmap <leader>b :NERDTree <cr> :set rnu <cr>
+    nmap <leader>t :tabnew <cr>
     let NERDTreeIgnore          = ['\.$','\~$']
     let NERDTreeShowBookmarks   = 1
     let NERDTreeShowFiles       = 1
@@ -63,11 +63,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "Complete & Promot"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'Valloric/YouCompleteMe'
-    let g:ycm_autoclose_preview_window_after_insertion = 1
-    let g:ycm_autoclose_preview_window_after_completion = 1
-    let g:ycm_use_ultisnips_completer = 1
-    let g:ycm_key_list_select_completion = ['<Down>']
-    let g:ycm_key_list_previous_completion = ['<Up>']
+   let g:ycm_autoclose_preview_window_after_insertion = 1
+   let g:ycm_autoclose_preview_window_after_completion = 1
+   let g:ycm_use_ultisnips_completer = 1
+   let g:ycm_key_list_select_completion = ['<Down>']
+   let g:ycm_key_list_previous_completion = ['<Up>']
 
 Plugin 'SirVer/ultisnips'
     let g:UltiSnipsExpandTrigger="<tab>"
@@ -214,6 +214,17 @@ noremap <Leader>Y "*y
 noremap <Leader>P "*p
 noremap <Leader>y "+y
 noremap <Leader>p "+p
+noremap <Leader>a ggvG$
+
+"save and exit
+noremap <Leader>s :w<cr>
+noremap <Leader>q :q<cr>
+
+"surround
+"	cs"'  change " to '
+"	ds"   remove "
+"	yss"  add " to whole line
+"	ysiw" add " to current world
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
