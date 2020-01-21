@@ -217,8 +217,9 @@ noremap <Leader>p "+p
 noremap <Leader>a ggvG$
 
 "save and exit
-noremap <Leader>s :w<cr>
+noremap <Leader>w :w<cr>
 noremap <Leader>q :q<cr>
+noremap <Leader>Q :q!<cr>
 
 "surround
 "	cs"'  change " to '
