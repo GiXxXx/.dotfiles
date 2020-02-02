@@ -45,6 +45,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme geoffgarside
 
 export LC_ALL=en_US.UTF-8
+bindkey -v
 
 # Apply the setting
 antigen apply
